@@ -120,23 +120,23 @@ CREATE TABLE IF NOT EXISTS `fa_grid1` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='明志服务' AUTO_INCREMENT=10 ;
 
 --
--- 转存表中的数据 `fa_satgrids`
+-- 转存表中的数据 `fa_grid1`
 --
 
-INSERT INTO `fa_grid1` (`id`, `name`, `image`, `url`, `target`, `appid`) VALUES
-(1, '考试规律', 'grid1.jpg', '../index/home', 'self', ''),
-(2, '联系CB', 'grid2.jpg', '../cb/cb', 'self', ''),
-(3, 'SAT代报名', 'grid3.jpg', '../read/read?id=1', 'self', ''),
-(4, '课外阅读', 'grid4.jpg', '', 'miniProgram', 'wx43463e997d47a2d5'),
-(5, '手机刷题', 'grid5.jpg', '', 'miniProgram', 'wx22d93a2d34272bbd'),
-(6, '打印真题', 'grid6.jpg', '', 'miniProgram', 'wx8e9b3280e250e423'),
-(7, '托福TPO', 'grid7.jpg', '', 'miniProgram', 'wx86a0f112f203b1a2'),
-(8, '反馈错题', 'grid8.jpg', '../feedback/feedback', 'self', ''),
-(9, '联系我们', 'grid9.jpg', '../contact/contact', 'self', '');
+INSERT INTO `fa_grid1` (`id`, `name`, `image`, `url`, `type`, `appid`) VALUES
+(1, '考试规律', '/assets/grid1.jpg', '../guilv/guilv', 'self', ''),
+(2, '联系CB', '/assets/grid2.jpg', '../cb/cb', 'self', ''),
+(3, 'SAT代报名', '/assets/grid3.jpg', '../read/read?id=1', 'self', ''),
+(4, '课外阅读', '/assets/grid4.jpg', '', 'miniProgram', 'wx43463e997d47a2d5'),
+(5, '手机刷题', '/assets/grid5.jpg', '', 'miniProgram', 'wx22d93a2d34272bbd'),
+(6, '打印真题', '/assets/grid6.jpg', '', 'miniProgram', 'wx8e9b3280e250e423'),
+(7, '托福TPO', '/assets/grid7.jpg', '', 'miniProgram', 'wx86a0f112f203b1a2'),
+(8, '反馈错题', '/assets/grid8.jpg', '../feedback/feedback', 'self', ''),
+(9, '联系我们', '/assets/grid9.jpg', '../contact/contact', 'self', '');
 -- --------------------------------------------------------
 
 --
--- 表的结构 `fa_satgrids2`
+-- 表的结构 `fa_grid2`
 --
 
 CREATE TABLE IF NOT EXISTS `fa_grid2` (
@@ -166,9 +166,9 @@ CREATE TABLE IF NOT EXISTS `fa_slide` (
 -- 转存表中的数据 `fa_slide`
 --
 
-INSERT INTO `fa_slide` (`id`, `src`, `url`) VALUES
-(1, 'slide1.jpg', '../feedback/feedback'),
-(3, '37.jpg', '');
+INSERT INTO `fa_slide` (`id`, `image`, `url`) VALUES
+(1, '/assets/slide1.jpg', '../feedback/feedback'),
+(2, '/assets/37.jpg', '');
 -- --------------------------------------------------------
 
 --
@@ -192,5 +192,5 @@ CREATE TABLE IF NOT EXISTS `fa_system` (
 -- 转存表中的数据 `fa_system`
 --
 
-INSERT INTO `fa_system` (`id`, `tel`, `name_list`, `chongti`, `queti`, `qq`, `link`, `is_popout`, `popout_url`) VALUES
-(1, '010-86466630', '王豪（北京四中）钟正和（北京四中）吴明哲（北京四中）贾卓凡（辽宁实验）杨扬（南京老师）梁浩洲(山师附中) 吴恩邦(重庆育才)洪贞娟', '(1)1605北美=OG5|\n(2)1605亚太=OG6|(3)1610北美=OG7|\n(4)1701北美=OG8|\n(5)1701亚太=1606北美|\n(6)1805亚太=1804(school day)|\n(7)1808北美=1710亚太|(8)1809北美(补考)=1712亚太|(9)1810亚太=1803(school day)|(10)1903亚太=1903(school day)', '(1)部分题目暂时没有拿到真题和答案|\n(2)如您有相关资源，可以向我们提供，万分感谢。', 'zhang1993072601|308463095|362066974', 'https://pan.baidu.com/s/1B-EgT1i6JIA_UpRtGsrq7w', '1', 'notice.png');
+INSERT INTO `fa_system` (`id`, `tel`, `name_list`, `chongti`, `queti`, `qq`, `link`, `is_popout`, `popout_image`) VALUES
+(1, '010-86466630', '王豪（北京四中）钟正和（北京四中）吴明哲（北京四中）贾卓凡（辽宁实验）杨扬（南京老师）梁浩洲(山师附中) 吴恩邦(重庆育才)洪贞娟', '(1)1605北美=OG5|\n(2)1605亚太=OG6|(3)1610北美=OG7|\n(4)1701北美=OG8|\n(5)1701亚太=1606北美|\n(6)1805亚太=1804(school day)|\n(7)1808北美=1710亚太|(8)1809北美(补考)=1712亚太|(9)1810亚太=1803(school day)|(10)1903亚太=1903(school day)', '(1)部分题目暂时没有拿到真题和答案|\n(2)如您有相关资源，可以向我们提供，万分感谢。', 'zhang1993072601|308463095|362066974', 'https://pan.baidu.com/s/1B-EgT1i6JIA_UpRtGsrq7w', '1', '/assets/notice.png');
