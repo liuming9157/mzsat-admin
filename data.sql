@@ -114,7 +114,7 @@ CREATE TABLE IF NOT EXISTS `fa_grid1` (
   `name` varchar(500) NOT NULL COMMENT '名称',
   `image` varchar(500) NOT NULL COMMENT '图片',
   `url` varchar(500) NOT NULL COMMENT '内部跳转链接',
-  `target` enum('self','miniProgram') NOT NULL COMMENT '跳转类型:self=内部跳转,miniProgram=小程序跳转',
+  `type` enum('self','miniProgram') NOT NULL COMMENT '跳转类型:self=内部跳转,miniProgram=小程序跳转',
   `appid` varchar(500) NOT NULL COMMENT '跳转小程序appid',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='明志服务' AUTO_INCREMENT=10 ;
@@ -123,7 +123,7 @@ CREATE TABLE IF NOT EXISTS `fa_grid1` (
 -- 转存表中的数据 `fa_satgrids`
 --
 
-INSERT INTO `fa_satgrids` (`id`, `name`, `image`, `url`, `target`, `appid`) VALUES
+INSERT INTO `fa_grid1` (`id`, `name`, `image`, `url`, `target`, `appid`) VALUES
 (1, '考试规律', 'grid1.jpg', '../index/home', 'self', ''),
 (2, '联系CB', 'grid2.jpg', '../cb/cb', 'self', ''),
 (3, 'SAT代报名', 'grid3.jpg', '../read/read?id=1', 'self', ''),
@@ -144,7 +144,7 @@ CREATE TABLE IF NOT EXISTS `fa_grid2` (
   `name` varchar(500) NOT NULL COMMENT '名称',
   `image` varchar(500) NOT NULL COMMENT '图片',
   `url` varchar(500) NOT NULL COMMENT '内部跳转链接',
-  `target`enum('self','miniProgram') NOT NULL COMMENT '跳转类型:self=内部跳转,miniProgram=小程序跳转',
+  `type`enum('self','miniProgram') NOT NULL COMMENT '跳转类型:self=内部跳转,miniProgram=小程序跳转',
   `app-id` varchar(500) NOT NULL COMMENT '跳转小程序appid',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='第三方服务' AUTO_INCREMENT=1 ;
