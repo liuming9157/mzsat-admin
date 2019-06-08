@@ -183,7 +183,7 @@ CREATE TABLE IF NOT EXISTS `fa_system` (
   `queti` text(1000) NOT NULL COMMENT '缺题说明',
   `qq` varchar(1000) NOT NULL COMMENT 'QQ群',
   `link` varchar(100) NOT NULL COMMENT '全部真题下载链接',
-  `is_popout` tinyint(1) NOT NULL COMMENT '是否有弹出层',
+  `popswitch` tinyint(1) NOT NULL COMMENT '是否有弹出层',
   `popout_image` varchar(500) NOT NULL COMMENT '弹出层图片地址',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='小程序设置' AUTO_INCREMENT=2 ;
@@ -192,5 +192,5 @@ CREATE TABLE IF NOT EXISTS `fa_system` (
 -- 转存表中的数据 `fa_system`
 --
 
-INSERT INTO `fa_system` (`id`, `tel`, `name_list`, `chongti`, `queti`, `qq`, `link`, `is_popout`, `popout_image`) VALUES
+INSERT INTO `fa_system` (`id`, `tel`, `name_list`, `chongti`, `queti`, `qq`, `link`, `popswitch`, `popout_image`) VALUES
 (1, '010-86466630', '王豪（北京四中）钟正和（北京四中）吴明哲（北京四中）贾卓凡（辽宁实验）杨扬（南京老师）梁浩洲(山师附中) 吴恩邦(重庆育才)洪贞娟', '(1)1605北美=OG5|\n(2)1605亚太=OG6|(3)1610北美=OG7|\n(4)1701北美=OG8|\n(5)1701亚太=1606北美|\n(6)1805亚太=1804(school day)|\n(7)1808北美=1710亚太|(8)1809北美(补考)=1712亚太|(9)1810亚太=1803(school day)|(10)1903亚太=1903(school day)', '(1)部分题目暂时没有拿到真题和答案|\n(2)如您有相关资源，可以向我们提供，万分感谢。', 'zhang1993072601|308463095|362066974', 'https://pan.baidu.com/s/1B-EgT1i6JIA_UpRtGsrq7w', '1', '/assets/notice.png');
