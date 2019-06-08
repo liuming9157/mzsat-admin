@@ -183,7 +183,7 @@ CREATE TABLE IF NOT EXISTS `fa_system` (
   `queti` text(1000) NOT NULL COMMENT '缺题说明',
   `qq` varchar(1000) NOT NULL COMMENT 'QQ群',
   `link` varchar(100) NOT NULL COMMENT '全部真题下载链接',
-  `is_popout` enum('0','1') NOT NULL COMMENT '弹出层:0=无,1=有',
+  `is_popout` tinyint(1) NOT NULL COMMENT '是否有弹出层',
   `popout_image` varchar(500) NOT NULL COMMENT '弹出层图片地址',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='小程序设置' AUTO_INCREMENT=2 ;
